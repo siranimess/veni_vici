@@ -1,77 +1,93 @@
-Paste this into **`README.md`**. Fill in your actual hours and recording tool, then add `walkthrough.gif` beside the README. Check the recording checkbox after your GIF demonstrates removing a ban.
-
-```markdown
 # Web Development Project 4 - Veni Vici
 
 Submitted by: **Animesh Niraula**
 
-This web app: **allows users to discover random Pokémon using PokéAPI. Each discovery displays an image, types, abilities, height, and weight. Users can ban types and abilities to personalize future discoveries and view previously discovered Pokémon in their session history.**
+This web app: **Veni Vici is a React discovery application that helps users explore Pokémon using PokéAPI. Users can discover random Pokémon, view their images, types, abilities, height, and weight, ban attributes they do not want to see in future discoveries, and browse their discovery history from the current session.**
 
-Time spent: **6** hours spent in total
+Time spent: **6 hours** spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 - [x] **Application features a button that creates a new API fetch request on click and displays at least three attributes and an image obtained from the returned JSON data**
-  - Clicking Discover makes an API fetch request.
-  - Each Pokémon consistently displays types, abilities, height, weight, and an image.
+  - [x] A Discover button creates a new API fetch request when clicked
+  - [x] Each discovery displays the Pokémon's image, types, abilities, height, and weight
+  - [x] The same attribute categories are displayed consistently across discoveries
 
 - [x] **Only one item/data from API call response is viewable at a time and at least one image is displayed per API call**
-  - One current discovery is displayed in the main discovery card.
-  - The displayed attributes and image come from the same Pokémon response.
-  - Each successful discovery displays an image.
-  - Earlier discoveries appear separately in the history section.
+  - [x] A single current Pokémon is displayed in the main discovery section
+  - [x] Displayed attributes match the displayed Pokémon image
+  - [x] Each successful discovery displays at least one image
 
 - [x] **API call response results should appear random to the user**
-  - Candidates are shuffled to generate random discoveries.
-  - The current Pokémon is excluded from the next discovery.
-  - Recently discovered Pokémon are deprioritized to reduce frequent repeats.
+  - [x] Clicking Discover selects a random Pokémon from the selected collection
+  - [x] The current Pokémon is excluded from the next discovery
+  - [x] Recently viewed Pokémon are deprioritized to reduce frequent repeats
 
 - [x] **Clicking on a displayed value for one attribute adds it to a displayed ban list**
-  - Pokémon types and abilities are clickable.
-  - Clicking an attribute adds it to the visible ban list.
-  - Clicking an entry in the ban list immediately removes it.
+  - [x] Types and abilities are clickable attributes
+  - [x] Clicking an attribute immediately adds it to the ban list
+  - [x] Clicking an attribute in the ban list immediately removes it
 
 - [x] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
-  - Future discoveries skip Pokémon with any banned type or ability.
-  - Previously displayed discoveries remain in the session history.
-  - Restrictive bans may produce a message asking the user to remove a ban, expand the collection, or try again.
-  - [ ] _To ensure an accurate grade, the recording must show that clicking an attribute in the ban list immediately removes it from the list of banned attributes._
+  - [x] Pokémon with banned types are excluded from future discoveries
+  - [x] Pokémon with banned abilities are excluded from future discoveries
+  - [x] All types and abilities are checked before displaying a new Pokémon
+  - [ ] The walkthrough recording shows that clicking a banned attribute immediately removes it from the ban list
+
+## Optional Features
 
 The following **optional** features are implemented:
 
-- [x] Multiple types of attributes are clickable and can be added to the ban list.
-  - Users can ban both types and abilities.
+- [x] Multiple types of attributes are clickable and can be added to the ban list
+  - [x] Users can ban Pokémon types
+  - [x] Users can ban Pokémon abilities
+  - [x] Multiple bans can be active at the same time
 
-- [x] Users can see a stored history of their previously displayed results from this session.
-  - A dedicated history section displays previous Pokémon images and attributes.
-  - Each successful discovery updates the history.
-  - History resets when the page is refreshed.
+- [x] Users can see a stored history of their previously displayed results from this session
+  - [x] A dedicated section displays previously discovered Pokémon
+  - [x] History entries include images, types, abilities, height, and weight
+  - [x] Each successful discovery updates the history
+  - [x] The current discovery is displayed separately from previous discoveries
+
+## Additional Features
 
 The following **additional** features are implemented:
 
-- [x] A collection selector lets users explore the original 151, first 386, or first 1,010 Pokémon.
-- [x] A Clear all bans button removes every active ban.
-- [x] Loading feedback appears while the app searches for a discovery.
-- [x] Error messages explain failed requests and unsuccessful searches.
-- [x] Previously fetched Pokémon details are cached in memory.
-- [x] Images are loaded before a new discovery is displayed.
-- [x] Responsive styling supports desktop and mobile screens.
+- [x] A collection selector lets users choose the original 151, first 386, or first 1,010 Pokémon
+- [x] Changing the collection updates the API request's limit query parameter
+- [x] A Clear all bans button removes all active bans
+- [x] A counter displays the total number of successful discoveries
+- [x] A counter displays the number of active bans
+- [x] Loading feedback appears while searching for a new Pokémon
+- [x] Controls are disabled during loading to prevent conflicting actions
+- [x] Error messages provide feedback when requests fail
+- [x] A message appears when a search cannot find a matching Pokémon
+- [x] Previously fetched Pokémon details are cached during the session
+- [x] Images finish loading before a new discovery is displayed
+- [x] The application has a responsive layout for desktop and mobile screens
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src="./walkthrough.gif" title="Video Walkthrough" width="800" alt="Video Walkthrough" />
+<div>
+  <a href="https://www.loom.com/share/YOUR_PROJECT_4_VIDEO_ID">
+    <img src="https://www.loom.com/v1/videos/YOUR_PROJECT_4_VIDEO_ID/thumbnail.gif" width="300" alt="Veni Vici Video Walkthrough">
+  </a>
+</div>
 
-GIF created with **[Enter the recording tool you used]**.
+<!-- Replace YOUR_PROJECT_4_VIDEO_ID with your new Loom video ID. -->
+<!-- Check the recording checkbox after your video demonstrates removing a ban. -->
 
 ## Notes
 
-Connecting the React files correctly was a challenge. The app needed a single createRoot call in main.jsx, and the component name and export needed to match and begin with an uppercase letter.
+Connecting the React files correctly was a challenge while building this application. I initially placed the rendering code in App.jsx, even though main.jsx already handled rendering the app. The component name and export also had different spellings. The fix was to keep the rendering code in main.jsx and use a consistent component name beginning with an uppercase letter.
 
-Another challenge was checking the ban list before displaying a discovery. A Pokémon can have multiple types and abilities, so the app checks all of them and skips the result if any match a banned value. The app also waits for the image to load before updating the current discovery.
+The ban list needed to check every type and ability before displaying a new Pokémon. Some Pokémon have more than one type, so checking only the first type would allow unwanted results to appear. The filtering function checks all the types and abilities and skips a Pokémon if any value matches the ban list.
+
+The application also keeps the current discovery separate from previously viewed Pokémon. React state stores the current result, ban list, and history, while a cache stores previously fetched details. Waiting for the image to load before updating the result helps keep the displayed image and attributes together.
 
 ## License
 
@@ -88,4 +104,3 @@ Another challenge was checking the ban list before displaying a discovery. A Pok
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-```
