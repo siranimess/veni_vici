@@ -73,10 +73,10 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <div>
-    <a href="https://www.loom.com/share/252462736ab7467e8b36836f67e0b2a3">
+    <a href="https://www.loom.com/share/a2917084740a4e448cc8ff7a00d66477">
     </a>
-    <a href="https://www.loom.com/share/252462736ab7467e8b36836f67e0b2a3">
-      <img style="max-width:300px;" src="https://www.loom.com/v1/videos/252462736ab7467e8b36836f67e0b2a3/thumbnail.gif">
+    <a href="https://www.loom.com/share/a2917084740a4e448cc8ff7a00d66477">
+      <img style="max-width:300px;" src="https://www.loom.com/v1/videos/a2917084740a4e448cc8ff7a00d66477/thumbnail.gif">
     </a>
   </div>
 
