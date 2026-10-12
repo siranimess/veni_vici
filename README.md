@@ -73,10 +73,12 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <div>
-  <a href="https://www.loom.com/share/YOUR_PROJECT_4_VIDEO_ID">
-    <img src="https://www.loom.com/v1/videos/YOUR_PROJECT_4_VIDEO_ID/thumbnail.gif" width="300" alt="Veni Vici Video Walkthrough">
-  </a>
-</div>
+    <a href="https://www.loom.com/share/252462736ab7467e8b36836f67e0b2a3">
+    </a>
+    <a href="https://www.loom.com/share/252462736ab7467e8b36836f67e0b2a3">
+      <img style="max-width:300px;" src="https://www.loom.com/v1/videos/252462736ab7467e8b36836f67e0b2a3/thumbnail.gif">
+    </a>
+  </div>
 
 <!-- Replace YOUR_PROJECT_4_VIDEO_ID with your new Loom video ID. -->
 <!-- Check the recording checkbox after your video demonstrates removing a ban. -->
